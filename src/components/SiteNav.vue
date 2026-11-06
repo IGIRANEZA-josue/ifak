@@ -83,7 +83,6 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onKeydown))
           >
             {{ link.label }}
           </router-link>
-          <router-link class="btn btn-primary btn-sm nav-cta" to="/contact">Enquire</router-link>
         </nav>
 
         <button
@@ -112,7 +111,6 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onKeydown))
               {{ link.label }}
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
             </router-link>
-            <router-link class="btn btn-primary btn-block mobile-cta" to="/contact" @click="mobileOpen = false">Enquire / Contact the school</router-link>
           </nav>
         </div>
       </div>
@@ -153,7 +151,6 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onKeydown))
 }
 .nav-link:hover { color: var(--navy); background: var(--surface); }
 .nav-link.active { color: var(--navy); border-bottom-color: var(--navy); border-radius: 0; }
-.nav-cta { margin-left: 0.65rem; }
 
 /* ---- Hamburger ---- */
 .hamburger {
@@ -185,7 +182,6 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onKeydown))
 }
 .mobile-link:last-of-type { border-bottom: none; }
 .mobile-link.active { color: var(--navy); background: var(--surface); }
-.mobile-cta { margin-top: 0.75rem; }
 
 @media (max-width: 1023px) {
   .nav-desktop { display: none; }
