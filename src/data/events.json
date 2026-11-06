@@ -1,24 +1,5 @@
 [
   {
-    "id": 1,
-    "slug": "christmas-celebration-2026",
-    "title": "Christmas Celebration — Don Bosco Schools Kimihurura",
-    "date": "2026-12-23",
-    "time": "10:00",
-    "location": "IFAK Don Bosco Kimihurura, Kimihurura — Gasabo, Kigali",
-    "image": "/images/events/christmas-celebration.jpg",
-    "imageAlt": "Students performing on stage during the Don Bosco schools Christmas celebration",
-    "category": "School Celebrations",
-    "description": "The Don Bosco schools of Kimihurura — IFAK Secondary, EPA Kimihurura and Don Bosco Nursery & Primary — come together for a joyful Christmas celebration before the holidays.",
-    "content": "The Don Bosco family of schools in Kimihurura gathers for the annual Christmas celebration ahead of the school holidays. Students perform items prepared over the term — choir, poems, drama and dance — before families, teachers and friends.\n\nThe celebration is an expression of the joy of Christmas as understood by Don Bosco: a family moment built on song, prayer and gratitude. Parents and friends are warmly welcome.\n\nNote: The programme and time are indicative for the 2026 calendar. The official schedule will be communicated to parents through the school office and notice boards.",
-    "indicative": true,
-    "tags": [
-      "Christmas",
-      "Celebration"
-    ],
-    "imageFallback": "/images/events/christmas-celebration.jpg"
-  },
-  {
     "id": 2,
     "slug": "feast-of-st-john-bosco-2027",
     "title": "Feast of St John Bosco — Founder of the Salesians",
@@ -35,8 +16,7 @@
       "Don Bosco",
       "Salesian",
       "Feast"
-    ],
-    "imageFallback": "/images/news/ifak-at-62-celebration.jpg"
+    ]
   },
   {
     "id": 3,
@@ -55,8 +35,7 @@
       "Mary Help of Christians",
       "Parish",
       "Salesian"
-    ],
-    "imageFallback": "/images/news/parish-adma.jpg"
+    ]
   },
   {
     "id": 4,
@@ -75,8 +54,7 @@
       "Anniversary",
       "Don Bosco",
       "Salesian"
-    ],
-    "imageFallback": "/images/news/ifak-at-62-celebration.jpg"
+    ]
   },
   {
     "id": 5,
@@ -94,8 +72,7 @@
     "tags": [
       "Kwibuka31",
       "Commemoration"
-    ],
-    "imageFallback": "/images/news/kwibuka31.jpg"
+    ]
   },
   {
     "id": 6,
@@ -113,7 +90,6 @@
     "tags": [
       "Parish",
       "Mary Help of Christians"
-    ],
-    "imageFallback": "/images/news/parish-adma.jpg"
+    ]
   }
 ]

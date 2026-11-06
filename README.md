@@ -122,6 +122,14 @@ Notes:
 - `attachment` may be `null`. Only link files that actually exist in `public/attachments/`.
 - `relatedSlug` optionally links to a news article (“Read the related story”).
 
+### 3b. The photo gallery
+
+`/gallery` lists albums from `src/data/gallery.json`; each album lives at `/gallery/:slug` with its own
+photos and a fullscreen lightbox (arrows, Esc, counters). Albums reference the school’s **official
+photographs** hosted on ifakdonbosco.ac.rw. Adding photos means editing the `photos` array of the
+relevant album — each photo needs `src` (absolute URL) and `caption`. Every photo on the site comes
+from the official IFAK website; **no AI-generated imagery is used anywhere**.
+
 ### 4. Categories
 
 `src/data/categories.json` holds the 10 news categories (name, slug, colour, description).
@@ -169,10 +177,14 @@ src/
       PastEvents.vue          # past list
     announcements/
       AnnouncementCard.vue    # expandable notice with PDF attachment support
+    gallery/
+      AlbumCard.vue           # album card (cover, date, photo count)
+      Lightbox.vue            # keyboard-accessible fullscreen photo viewer
   pages/
-    Home.vue  News.vue  NewsDetails.vue  Events.vue  EventDetails.vue  Announcements.vue  NotFound.vue
+    Home.vue  News.vue  NewsDetails.vue  Events.vue  EventDetails.vue  Announcements.vue
+    Gallery.vue  GalleryAlbum.vue  NotFound.vue
   data/
-    news.json  events.json  announcements.json  categories.json
+    news.json  events.json  announcements.json  categories.json  gallery.json
   utils/
     content.js                # formatting, filtering, sharing helpers
   router/index.js
@@ -200,17 +212,16 @@ announcements, the calendar grid, 404s — and fails if any expected content is 
 - Seeded articles are **adapted from the official IFAK website** (ifakdonbosco.ac.rw) and credited to
   their original authors. The parish/ADMA article was expanded with the full official report (Bishop
   Casimir Uwumukiza’s Mass, 25 first professions, Fr. Gabriel Ngendakuriyo presiding).
-- **Photos of real events are hotlinked from the official IFAK website** (the school’s own images),
-  e.g. the 62nd anniversary celebration, Kwibuka31, the Money Makeover Challenge, the ADMA vows Mass
-  and Dean Mwizerwa’s examination preparation. Every hotlinked image has a **local generated
-  fallback** in `public/images/` (wired via `SmartImage.vue` + the `imageFallback` field) so the site
-  still renders if the official site is unreachable.
-- The **homepage hero** and **About section** use real official-site photographs
-  (`DSC_0206.jpg` campus; `Barore-4.jpg` alumni anniversary gathering) with local fallbacks.
-- The **Christmas Celebration 2026** event has no real photo available; it uses an AI-generated
-  illustrative image and is marked *indicative*.
-- The navigation and footer display the **official IFAK logo** from the school’s site, with the
-  inline-SVG crest as automatic fallback.
+- **All photographs are real photos from the official IFAK website** (the school’s own imagery,
+  hotlinked). No AI-generated, stock or placeholder photos are used anywhere on the site. If the
+  official site is unreachable, images are simply not shown — they are never replaced with fakes.
+- The **homepage hero** uses the official campus photograph (`DSC_0206.jpg`); the About section uses
+  the alumni anniversary photo (`Barore-4.jpg`).
+- The navigation and footer display the **official IFAK logo**, with an inline SVG crest as a
+  purely decorative fallback (it is a vector emblem, not a photo).
+- The photo gallery (`/gallery`) is organised in six albums with 44 verified URLs from the official site.
+- If you want fully self-hosted images, download the files from the official site, drop them into
+  `public/images/` and point the JSON/gallery URLs at the local copies, then rebuild.
 - Events marked *“indicative”* describe recurring school and parish celebrations and **must be
   confirmed with the school office** before being treated as official.
 - If you prefer fully self-hosted images, copy the referenced files into `public/images/` and point

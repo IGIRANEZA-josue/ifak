@@ -10,11 +10,15 @@ const checks = [
   { url: '/news/kwibuka31-amb-nsengimana-urges-love-and-unity', must: ['Kwibuka31', 'Joseph Nsengimana'] },
   { url: '/news/kimihurura-parish-adma-vows', must: ['ADMA', 'Mary Help of Christians', 'Uwumukiza', '12.02.43-PM-1-1024x682.jpeg'] },
   { url: '/news/does-not-exist', must: ['Article not found', 'Back to all news'] },
-  { url: '/events', must: ['Upcoming events', 'School calendar', 'Past events', 'cal-day', 'Christmas Celebration', 'Feast of St John Bosco', 'indicative'] },
+  { url: '/events', must: ['Upcoming events', 'School calendar', 'Past events', 'cal-day', 'Feast of Mary Help', 'Feast of St John Bosco', 'indicative'] },
   { url: '/events/ifak-at-62-celebration-2026', must: ['IFAK at 62', 'When &amp; where', 'Read the full story', 'Add to Google Calendar'] },
   { url: '/events/feast-of-st-john-bosco-2027', must: ['Feast of St John Bosco', '31 January 2027', 'Add to Google Calendar'] },
   { url: '/events/nope', must: ['Event not found'] },
   { url: '/events/mary-help-parish-feast-2025', must: ['Mary Help', '12.02.38-PM-1024x682.jpeg'] },
+  { url: '/gallery', must: ['Photo gallery', 'IFAK at 62', 'Campus &amp; Community', 'ifakdonbosco.ac.rw'] },
+  { url: '/gallery/ifak-at-62', must: ['IFAK at 62', 'ONE97911-1024x721.jpg', 'photos'] },
+  { url: '/gallery/kwibuka31', must: ['Kwibuka31', '2A9A0247-2.jpg'] },
+  { url: '/gallery/not-an-album', must: ['Album not found'] },
   { url: '/announcements', must: ['School Announcements', 'Admissions Enquiries', 'ifak-admissions-2026-2027.pdf', 'Read full notice'] },
   { url: '/totally-unknown-route', must: ['404', 'wandered'] }
 ]

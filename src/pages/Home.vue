@@ -53,7 +53,6 @@ const pillars = [
       <figure class="hero-media">
         <SmartImage
           src="https://ifakdonbosco.ac.rw/wp-content/uploads/2022/09/DSC_0206.jpg"
-          fallback="/images/hero-campus.jpg"
           alt="IFAK Don Bosco Kimihurura campus"
           width="1400" height="788"
           loading="eager"
@@ -176,7 +175,6 @@ const pillars = [
       <figure class="visit-media">
         <SmartImage
           src="https://ifakdonbosco.ac.rw/wp-content/uploads/2026/03/Barore-4.jpg"
-          fallback="/images/news/barore-alumni.jpg"
           alt="IFAK alumni gathered on campus during the anniversary celebrations"
           width="1100" height="750"
         />
