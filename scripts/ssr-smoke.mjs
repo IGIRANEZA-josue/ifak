@@ -1,7 +1,7 @@
 import { render } from '../dist-ssr/entry-server.js'
 
 const checks = [
-  { url: '/', must: ['IFAK', 'Latest news', 'Upcoming events', 'Announcements', 'DSC_0206.jpg', 'ifak-at-62'] },
+  { url: '/', must: ['IFAK', 'Latest from the school', 'Upcoming events', 'Announcements', 'DSC_0206.jpg', 'ifak-at-62'] },
   { url: '/news', must: ['Featured', 'IFAK at 62', 'Search articles', 'Clear filters', 'Showing'] },
   { url: '/news/ifak-at-62-feast-of-st-john-bosco', must: ['IFAK at 62: Celebrating St John Bosco', 'Mukyo Thadee', 'Share this story', 'Continue reading', 'Feb'] },
   { url: '/news/barore-reflects-on-ifak-values', must: ['Barore', 'Cleophas', 'le mot du soir', 'Share this story'] },

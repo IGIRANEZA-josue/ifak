@@ -1,6 +1,6 @@
 <script setup>
 import { ref, computed } from 'vue'
-import { formatDate, splitParagraphs, pillStyle } from '../../utils/content'
+import { formatDate, splitParagraphs } from '../../utils/content'
 
 const props = defineProps({
   announcement: { type: Object, required: true }
@@ -25,7 +25,7 @@ function attachmentHref(file) {
 
     <div class="announcement-body">
       <div class="announcement-topline">
-        <span class="pill" :style="pillStyle(announcement.category)">{{ announcement.category }}</span>
+        <span class="pill">{{ announcement.category }}</span>
         <time class="announcement-datetime" :datetime="announcement.date">{{ formatDate(announcement.date) }}</time>
         <span v-if="announcement.indicative" class="indicative-tag">Indicative</span>
       </div>
@@ -74,18 +74,19 @@ function attachmentHref(file) {
 <style scoped>
 .announcement { display: grid; grid-template-columns: 96px 1fr; }
 .announcement-date {
-  background: var(--navy-900); color: #fdfaf0;
+  background: var(--surface);
+  border-right: 1px solid var(--line);
   display: flex; flex-direction: column; align-items: center; justify-content: center;
   gap: 0.15rem; padding: 1rem 0.5rem; text-align: center;
 }
-.announcement-day { font-family: var(--font-display); font-size: 1.9rem; font-weight: 700; color: var(--gold-light); line-height: 1; }
-.announcement-month { font-size: 0.62rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(244,241,232,0.75); }
+.announcement-day { font-size: 1.6rem; font-weight: 700; color: var(--navy); line-height: 1; }
+.announcement-month { font-size: 0.6rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
 .announcement-body { padding: 1.1rem 1.35rem 1.2rem; display: flex; flex-direction: column; gap: 0.5rem; }
 .announcement-topline { display: flex; align-items: center; gap: 0.65rem; flex-wrap: wrap; }
 .announcement-datetime { font-size: 0.8rem; color: var(--muted); }
 .announcement-title { font-size: 1.18rem; line-height: 1.3; }
 .announcement-desc { color: var(--muted); font-size: 0.94rem; }
-.announcement-details { font-size: 0.95rem; background: var(--cream); border: 1px solid var(--line); border-radius: var(--radius-sm); padding: 0.9rem 1rem; margin-top: 0.25rem; }
+.announcement-details { font-size: 0.95rem; background: var(--bg); border: 1px solid var(--line); border-radius: var(--radius-sm); padding: 0.9rem 1rem; margin-top: 0.25rem; }
 .announcement-actions { display: flex; align-items: center; gap: 1.25rem; flex-wrap: wrap; margin-top: 0.25rem; }
 .toggle-btn { background: none; border: none; cursor: pointer; font-size: 0.88rem; }
 .chevron { transition: transform var(--transition); }
@@ -93,10 +94,10 @@ function attachmentHref(file) {
 .attachment-chip {
   display: inline-flex; align-items: center; gap: 0.6rem;
   border: 1px solid var(--line-strong); border-radius: var(--radius-sm);
-  padding: 0.45rem 0.75rem; text-decoration: none; color: var(--navy-800);
+  padding: 0.45rem 0.75rem; text-decoration: none; color: var(--navy);
   background: #fff; transition: border-color var(--transition), box-shadow var(--transition);
 }
-.attachment-chip:hover { border-color: var(--gold-dark); box-shadow: var(--shadow-sm); }
+.attachment-chip:hover { border-color: var(--navy); box-shadow: var(--shadow-sm); }
 .attachment-label { display: block; font-size: 0.82rem; font-weight: 600; line-height: 1.3; }
 .attachment-meta { display: block; font-size: 0.68rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; }
 @media (max-width: 640px) {

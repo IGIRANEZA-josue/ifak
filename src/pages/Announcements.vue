@@ -90,7 +90,7 @@ function clearFilters() {
 
 <style scoped>
 .narrow { max-width: 980px; }
-.announcements-page { background: var(--cream); }
+.announcements-page { background: var(--bg); }
 .notice-block { margin-bottom: 1.5rem; }
 .notice-block a { color: inherit; font-weight: 600; }
 
@@ -101,7 +101,7 @@ function clearFilters() {
 
 .announcement-list { display: flex; flex-direction: column; gap: 1.1rem; }
 .footer-note { margin-top: 2rem; font-size: 0.85rem; color: var(--muted); text-align: center; }
-.footer-note a { color: var(--navy-800); font-weight: 600; text-decoration: none; }
+.footer-note a { color: var(--navy); font-weight: 600; text-decoration: none; }
 .footer-note a:hover { text-decoration: underline; }
 @media (max-width: 640px) {
   .toolbar-select, .toolbar .btn { flex: 1; }

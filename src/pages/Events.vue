@@ -57,7 +57,7 @@ const past = computed(() => split.value.past)
 </template>
 
 <style scoped>
-.events-page { background: var(--cream); }
+.events-page { background: var(--bg); }
 .notice-block { margin-bottom: 2rem; }
 .notice-block a { color: inherit; font-weight: 600; }
 .events-section-head { margin-top: 2.25rem; margin-bottom: 1.1rem; }
@@ -66,10 +66,10 @@ const past = computed(() => split.value.past)
 .past-head { margin-top: 2.75rem; }
 .section-sub { color: var(--muted); margin-top: 0.3rem; max-width: 70ch; }
 .count-badge {
-  font-family: var(--font-sans); font-size: 0.75rem; font-weight: 700;
-  background: var(--gold); color: var(--navy-950); border-radius: 999px;
-  padding: 0.2rem 0.65rem; min-width: 1.8rem; text-align: center;
+  font-size: 0.72rem; font-weight: 600;
+  background: var(--navy-soft); color: var(--navy); border-radius: 4px;
+  padding: 0.15rem 0.55rem; text-align: center; border: 1px solid var(--line-strong);
 }
-.count-muted { background: var(--navy-100); color: var(--navy-800); }
+.count-muted { background: var(--navy-soft); color: var(--navy); }
 .muted-note { color: var(--muted); padding: 1rem 0; }
 </style>

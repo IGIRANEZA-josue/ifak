@@ -1,5 +1,5 @@
 <script setup>
-import { formatDate, pillStyle } from '../../utils/content'
+import { formatDate } from '../../utils/content'
 import SmartImage from '../SmartImage.vue'
 
 defineProps({
@@ -14,7 +14,7 @@ defineProps({
     </router-link>
     <div class="card-body">
       <div class="card-topline">
-        <span class="pill" :style="pillStyle(article.category)">{{ article.category }}</span>
+        <span class="pill">{{ article.category }}</span>
         <time class="card-date" :datetime="article.date">{{ formatDate(article.date) }}</time>
       </div>
       <h3 class="card-title">

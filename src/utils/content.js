@@ -1,5 +1,4 @@
 // Shared helpers for content rendering.
-import categories from '../data/categories.json'
 import news from '../data/news.json'
 import events from '../data/events.json'
 import announcements from '../data/announcements.json'
@@ -30,30 +29,7 @@ export function dateBadge(iso) {
   }
 }
 
-const colorByName = new Map(categories.map((c) => [c.name, c.color]))
 
-const ANNOUNCEMENT_COLORS = {
-  Admissions: '#1e5aa8',
-  Academic: '#1e5aa8',
-  Examinations: '#4338ca',
-  'School Calendar Updates': '#c2410c',
-  Competitions: '#6d28d9',
-  'General Notices': '#475569'
-}
-
-export function categoryColor(name) {
-  return colorByName.get(name) || ANNOUNCEMENT_COLORS[name] || '#475569'
-}
-
-/** Inline style for a category pill (tinted translucent background). */
-export function pillStyle(name) {
-  const color = categoryColor(name)
-  return {
-    '--pill-color': color,
-    '--pill-bg': `${color}14`,
-    '--pill-border': `${color}33`
-  }
-}
 
 export function readingTime(text = '') {
   const words = String(text).trim().split(/\s+/).filter(Boolean).length

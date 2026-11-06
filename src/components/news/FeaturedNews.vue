@@ -1,5 +1,5 @@
 <script setup>
-import { formatDate, pillStyle } from '../../utils/content'
+import { formatDate } from '../../utils/content'
 import SmartImage from '../SmartImage.vue'
 
 defineProps({
@@ -8,38 +8,32 @@ defineProps({
 </script>
 
 <template>
-  <article class="featured" :aria-label="`Featured article: ${article.title}`">
-    <SmartImage
-      class="featured-bg"
-      :src="article.image"
-      :fallback="article.imageFallback"
-      :alt="article.imageAlt || article.title"
-      width="1600" height="900"
-      loading="eager"
-      fetchpriority="high"
-    />
-    <div class="featured-overlay" aria-hidden="true"></div>
+  <article class="featured card" :aria-label="`Featured article: ${article.title}`">
+    <router-link class="featured-media" :to="`/news/${article.slug}`" tabindex="-1" :aria-hidden="true">
+      <SmartImage
+        :src="article.image"
+        :fallback="article.imageFallback"
+        :alt="article.imageAlt || article.title"
+        width="1200" height="800"
+        loading="eager"
+        fetchpriority="high"
+      />
+    </router-link>
 
-    <span class="featured-flag">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.6 5.6 6.1.6-4.6 4 1.3 6-5.4-3.1L6.6 18.2l1.3-6-4.6-4 6.1-.6L12 2z"/></svg>
-      Featured
-    </span>
-
-    <div class="featured-content">
+    <div class="featured-body">
       <div class="featured-meta">
-        <span class="pill pill-dark" :style="pillStyle(article.category)">{{ article.category }}</span>
+        <span class="featured-label">Featured story</span>
+        <span class="featured-dot" aria-hidden="true">·</span>
         <time :datetime="article.date">{{ formatDate(article.date) }}</time>
       </div>
+      <span class="pill">{{ article.category }}</span>
       <h2 class="featured-title">
         <router-link :to="`/news/${article.slug}`">{{ article.title }}</router-link>
       </h2>
       <p class="featured-desc">{{ article.description }}</p>
       <div class="featured-foot">
         <span class="featured-author">By {{ article.author }}</span>
-        <router-link class="btn btn-gold btn-sm" :to="`/news/${article.slug}`">
-          Read full story
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-        </router-link>
+        <router-link class="btn btn-primary btn-sm" :to="`/news/${article.slug}`">Read the full story</router-link>
       </div>
     </div>
   </article>
@@ -47,42 +41,35 @@ defineProps({
 
 <style scoped>
 .featured {
-  position: relative; border-radius: var(--radius-lg); overflow: hidden;
-  min-height: clamp(380px, 52vh, 520px);
-  display: flex; align-items: flex-end;
-  box-shadow: var(--shadow-lg);
-  border: 1px solid rgba(255,255,255,0.08);
-  background: var(--navy-900);
+  display: grid; grid-template-columns: 1fr 1fr;
+  min-height: 320px;
 }
-.featured-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-.featured-overlay {
-  position: absolute; inset: 0;
-  background: linear-gradient(180deg, rgba(11,29,46,0.05) 0%, rgba(11,29,46,0.35) 45%, rgba(11,29,46,0.92) 100%);
+.featured-media { display: block; overflow: hidden; background: var(--surface-2); min-height: 260px; }
+.featured-media img { width: 100%; height: 100%; object-fit: cover; }
+.featured-body {
+  padding: clamp(1.4rem, 3vw, 2.1rem);
+  display: flex; flex-direction: column; gap: 0.65rem; align-items: flex-start;
 }
-.featured-flag {
-  position: absolute; top: 1.1rem; right: 1.1rem; z-index: 2;
-  display: inline-flex; align-items: center; gap: 0.35rem;
-  font-size: 0.7rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
-  color: var(--navy-950); background: var(--gold);
-  border-radius: 999px; padding: 0.4rem 0.85rem;
-  box-shadow: var(--shadow-md);
+.featured-meta {
+  display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;
+  font-size: 0.8rem; color: var(--muted);
 }
-.featured-content {
-  position: relative; z-index: 1;
-  display: flex; flex-direction: column; gap: 0.8rem;
-  padding: clamp(1.4rem, 4vw, 2.4rem);
-  max-width: 880px;
+.featured-label {
+  font-size: 0.68rem; font-weight: 600; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--navy);
 }
-.featured-meta { display: flex; align-items: center; gap: 0.9rem; flex-wrap: wrap; color: rgba(244,241,232,0.85); font-size: 0.85rem; }
-.pill-dark { backdrop-filter: blur(4px); }
-.featured-title { font-size: clamp(1.5rem, 3.4vw, 2.5rem); line-height: 1.15; color: #fdfaf0; }
-.featured-title a { color: inherit; text-decoration: none; }
-.featured-title a:hover { text-decoration: underline; text-underline-offset: 6px; text-decoration-color: var(--gold); }
-.featured-desc { color: rgba(244,241,232,0.88); font-size: 1.02rem; line-height: 1.55; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
-.featured-foot { display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; margin-top: 0.25rem; }
-.featured-author { color: rgba(244,241,232,0.75); font-size: 0.88rem; }
-@media (max-width: 560px) {
-  .featured { min-height: 460px; }
-  .featured-desc { -webkit-line-clamp: 3; }
+.featured-title { font-size: clamp(1.35rem, 2.2vw, 1.7rem); line-height: 1.28; font-weight: 650; }
+.featured-title a { color: var(--navy-ink); text-decoration: none; }
+.featured-title a:hover { color: var(--navy); text-decoration: underline; text-underline-offset: 4px; }
+.featured-desc { color: var(--muted); font-size: 0.95rem; line-height: 1.6; }
+.featured-foot {
+  margin-top: auto; padding-top: 1rem;
+  display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; width: 100%;
+  border-top: 1px solid var(--line);
+}
+.featured-author { color: var(--muted); font-size: 0.85rem; }
+@media (max-width: 880px) {
+  .featured { grid-template-columns: 1fr; }
+  .featured-media { aspect-ratio: 16 / 10; min-height: 0; }
 }
 </style>

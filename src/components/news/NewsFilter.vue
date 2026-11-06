@@ -58,7 +58,7 @@ const emit = defineEmits(['update:query', 'update:category', 'update:sort', 'cle
 
 <style scoped>
 .filter-bar {
-  background: var(--paper); border: 1px solid var(--line);
+  background: var(--bg); border: 1px solid var(--line);
   border-radius: var(--radius); padding: 1rem 1.1rem;
   box-shadow: var(--shadow-sm);
   display: flex; flex-direction: column; gap: 0.6rem;

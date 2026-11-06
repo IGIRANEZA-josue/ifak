@@ -1,7 +1,7 @@
 <script setup>
 import { computed, ref, watch } from 'vue'
 import { useRoute } from 'vue-router'
-import { formatDate, pillStyle, readingTime, splitParagraphs, findNewsBySlug, buildShareLinks } from '../utils/content'
+import { formatDate, readingTime, splitParagraphs, findNewsBySlug, buildShareLinks } from '../utils/content'
 import SmartImage from '../components/SmartImage.vue'
 import RelatedNews from '../components/news/RelatedNews.vue'
 
@@ -61,7 +61,7 @@ watch(article, (a) => {
         <!-- Header -->
         <header class="article-header">
           <div class="article-meta-top">
-            <span class="pill" :style="pillStyle(article.category)">{{ article.category }}</span>
+            <span class="pill">{{ article.category }}</span>
             <time :datetime="article.date">{{ formatDate(article.date) }}</time>
             <span class="reading-time">{{ minutes }} min read</span>
           </div>
@@ -137,28 +137,28 @@ watch(article, (a) => {
 
 <style scoped>
 .narrow { max-width: 720px; margin-inline: auto; }
-.article-page { background: var(--cream); padding-bottom: 4rem; }
+.article-page { background: var(--bg); padding-bottom: 4rem; }
 .article-container { max-width: 1020px; }
 .article-crumbs {
   display: flex; gap: 0.55rem; align-items: center; flex-wrap: wrap;
   font-size: 0.83rem; color: var(--muted); padding-top: 1.5rem;
 }
-.article-crumbs a { color: var(--navy-800); text-decoration: none; font-weight: 600; }
+.article-crumbs a { color: var(--navy); text-decoration: none; font-weight: 600; }
 .article-crumbs a:hover { text-decoration: underline; }
-.crumb-current { color: var(--gold-dark); font-weight: 600; }
+.crumb-current { color: var(--muted); }
 
 .article-header { padding-block: 1.1rem 1.35rem; display: flex; flex-direction: column; gap: 0.9rem; }
-.article-meta-top { display: flex; align-items: center; gap: 0.9rem; flex-wrap: wrap; color: var(--muted); font-size: 0.88rem; }
+.article-meta-top { display: flex; align-items: center; gap: 0.8rem; flex-wrap: wrap; color: var(--muted); font-size: 0.87rem; }
 .reading-time::before { content: "· "; }
-.article-title { font-size: clamp(1.7rem, 4.2vw, 2.6rem); line-height: 1.16; letter-spacing: -0.015em; max-width: 26ch; }
+.article-title { font-size: clamp(1.55rem, 3.6vw, 2.15rem); line-height: 1.22; font-weight: 650; letter-spacing: -0.01em; max-width: 30ch; }
 .article-byline { display: flex; align-items: center; gap: 0.75rem; }
 .author-avatar {
-  width: 46px; height: 46px; border-radius: 50%; flex: none;
-  background: var(--navy-900); color: var(--gold-light);
+  width: 44px; height: 44px; border-radius: 50%; flex: none;
+  background: var(--navy); color: #fff;
   display: inline-flex; align-items: center; justify-content: center;
-  font-family: var(--font-display); font-weight: 700; font-size: 1.1rem;
+  font-weight: 600; font-size: 1rem;
 }
-.article-byline strong { display: block; color: var(--navy-900); font-size: 0.95rem; }
+.article-byline strong { display: block; color: var(--navy-ink); font-size: 0.95rem; }
 .author-role { font-size: 0.78rem; color: var(--muted); }
 
 .article-cover-wrap { margin-bottom: 1.5rem; }
@@ -169,13 +169,12 @@ watch(article, (a) => {
 
 .article-body { max-width: 780px; }
 .article-lede {
-  font-size: 1.18rem; line-height: 1.6; color: var(--navy-800);
-  border-left: 4px solid var(--gold); padding-left: 1.1rem; margin-bottom: 1.4rem;
-  font-family: var(--font-display);
+  font-size: 1.1rem; line-height: 1.6; color: var(--navy-ink); font-weight: 550;
+  padding-bottom: 1.1rem; margin-bottom: 1.3rem; border-bottom: 1px solid var(--line);
 }
 
 .tag-row { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 1.5rem; }
-.tag { font-size: 0.8rem; color: var(--navy-800); background: var(--navy-100); border-radius: 6px; padding: 0.3rem 0.65rem; text-decoration: none; }
+.tag { font-size: 0.8rem; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 4px; padding: 0.28rem 0.6rem; }
 
 .share-row {
   display: flex; align-items: center; gap: 0.85rem; flex-wrap: wrap;
@@ -186,11 +185,11 @@ watch(article, (a) => {
 .share-btn {
   width: 38px; height: 38px; display: inline-flex; align-items: center; justify-content: center;
   border-radius: 50%; border: 1px solid var(--line-strong); background: #fff;
-  color: var(--navy-800); cursor: pointer; text-decoration: none;
+  color: var(--navy); cursor: pointer; text-decoration: none;
   transition: background var(--transition), color var(--transition), border-color var(--transition);
 }
-.share-btn:hover { background: var(--navy-900); border-color: var(--navy-900); color: var(--gold-light); }
-.copied-hint { font-size: 0.8rem; color: var(--gold-dark); font-weight: 600; }
+.share-btn:hover { background: var(--navy); border-color: var(--navy); color: #fff; }
+.copied-hint { font-size: 0.8rem; color: var(--navy); font-weight: 600; }
 
 .source-note { font-size: 0.82rem; color: var(--muted); font-style: italic; margin-top: 1.25rem; }
 .back-news { margin-top: 1.5rem; }

@@ -98,7 +98,7 @@ function clearFilters() {
 </template>
 
 <style scoped>
-.news-page { background: var(--cream); }
+.news-page { background: var(--bg); }
 .featured-block { margin-bottom: 1.75rem; }
 .filter-block { margin-bottom: 1.5rem; }
 .results-grid { margin-top: 0.5rem; }

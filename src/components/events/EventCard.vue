@@ -1,5 +1,5 @@
 <script setup>
-import { formatDate, dateBadge, pillStyle } from '../../utils/content'
+import { formatDate, dateBadge } from '../../utils/content'
 import SmartImage from '../SmartImage.vue'
 
 defineProps({
@@ -20,7 +20,7 @@ defineProps({
 
     <div class="event-body">
       <div class="event-topline">
-        <span class="pill" :style="pillStyle(event.category)">{{ event.category }}</span>
+        <span class="pill">{{ event.category }}</span>
         <span v-if="event.indicative" class="indicative-tag" title="Date is indicative — confirm with the school office">Indicative date</span>
       </div>
       <h3 class="card-title">
@@ -52,21 +52,21 @@ defineProps({
 }
 .event-media { position: relative; display: block; overflow: hidden; min-height: 190px; }
 .event-media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-.past .event-media img { filter: grayscale(55%); opacity: 0.9; }
+.past .event-media img { filter: grayscale(70%); opacity: 0.9; }
 .event-badge {
-  position: absolute; left: 0.75rem; bottom: 0.75rem;
-  background: var(--navy-900); border: 1px solid rgba(255,255,255,0.2);
-  border-radius: var(--radius-sm); padding: 0.35rem 0.65rem; text-align: center;
-  box-shadow: var(--shadow-md);
+  position: absolute; left: 0.65rem; bottom: 0.65rem;
+  background: #fff; border: 1px solid var(--line-strong);
+  border-radius: var(--radius-sm); padding: 0.3rem 0.55rem; text-align: center;
+  box-shadow: var(--shadow-sm);
 }
-.event-badge-day { display: block; font-family: var(--font-display); font-size: 1.45rem; font-weight: 700; color: var(--gold-light); line-height: 1; }
-.event-badge-month { display: block; font-size: 0.58rem; font-weight: 700; letter-spacing: 0.12em; color: rgba(244,241,232,0.85); margin-top: 0.2rem; }
+.event-badge-day { display: block; font-size: 1.3rem; font-weight: 700; color: var(--navy); line-height: 1; }
+.event-badge-month { display: block; font-size: 0.58rem; font-weight: 600; letter-spacing: 0.1em; color: var(--muted); margin-top: 0.15rem; }
 .event-body { padding: 1rem 1.15rem 1.15rem; display: flex; flex-direction: column; gap: 0.5rem; }
 .event-topline { display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap; }
 .indicative-tag {
-  font-size: 0.65rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
-  color: #7c2d12; background: #fde8d0; border: 1px solid #f5c9a3;
-  border-radius: 999px; padding: 0.2rem 0.55rem;
+  font-size: 0.65rem; font-weight: 600; letter-spacing: 0.05em;
+  color: #6b5d1c; background: #fdf6e0; border: 1px solid #e8ddb0;
+  border-radius: 4px; padding: 0.18rem 0.45rem;
 }
 .event-meta { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 0.3rem; font-size: 0.85rem; color: var(--muted); }
 .event-meta li { display: flex; align-items: flex-start; gap: 0.45rem; }
