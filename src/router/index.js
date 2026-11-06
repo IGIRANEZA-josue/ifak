@@ -9,6 +9,8 @@ const routes = [
   { path: '/announcements', name: 'announcements', component: () => import('../pages/Announcements.vue'), meta: { title: 'Announcements | IFAK — Don Bosco Kimihurura' } },
   { path: '/gallery', name: 'gallery', component: () => import('../pages/Gallery.vue'), meta: { title: 'Photo Gallery | IFAK — Don Bosco Kimihurura' } },
   { path: '/gallery/:slug', name: 'gallery-album', component: () => import('../pages/GalleryAlbum.vue'), meta: { title: 'Photo Album | IFAK Gallery' } },
+  { path: '/about', name: 'about', component: () => import('../pages/About.vue'), meta: { title: 'About | IFAK — Don Bosco Kimihurura' } },
+  { path: '/contact', name: 'contact', component: () => import('../pages/Contact.vue'), meta: { title: 'Contact | IFAK — Don Bosco Kimihurura' } },
   { path: '/:pathMatch(.*)*', name: 'not-found', component: () => import('../pages/NotFound.vue'), meta: { title: 'Page not found | IFAK' } }
 ]
 

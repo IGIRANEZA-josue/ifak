@@ -11,7 +11,9 @@ const links = [
   { to: '/news', label: 'News' },
   { to: '/events', label: 'Events' },
   { to: '/gallery', label: 'Gallery' },
-  { to: '/announcements', label: 'Announcements' }
+  { to: '/announcements', label: 'Announcements' },
+  { to: '/about', label: 'About' },
+  { to: '/contact', label: 'Contact' }
 ]
 
 function isActive(to) {
@@ -81,7 +83,7 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onKeydown))
           >
             {{ link.label }}
           </router-link>
-          <router-link class="btn btn-primary btn-sm nav-cta" :to="{ path: '/', hash: '#contact' }">Enquire</router-link>
+          <router-link class="btn btn-primary btn-sm nav-cta" to="/contact">Enquire</router-link>
         </nav>
 
         <button
@@ -110,7 +112,7 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onKeydown))
               {{ link.label }}
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
             </router-link>
-            <router-link class="btn btn-primary btn-block mobile-cta" :to="{ path: '/', hash: '#contact' }" @click="mobileOpen = false">Enquire / Contact the school</router-link>
+            <router-link class="btn btn-primary btn-block mobile-cta" to="/contact" @click="mobileOpen = false">Enquire / Contact the school</router-link>
           </nav>
         </div>
       </div>
@@ -146,7 +148,7 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onKeydown))
 .nav-desktop { display: flex; align-items: center; gap: 0.15rem; }
 .nav-link {
   text-decoration: none; color: var(--ink);
-  font-weight: 550; font-size: 0.9rem; padding: 0.45rem 0.75rem; border-radius: var(--radius-sm);
+  font-weight: 550; font-size: 0.88rem; padding: 0.45rem 0.62rem; border-radius: var(--radius-sm);
   border-bottom: 2px solid transparent;
 }
 .nav-link:hover { color: var(--navy); background: var(--surface); }

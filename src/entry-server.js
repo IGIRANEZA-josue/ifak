@@ -10,6 +10,8 @@ import EventDetails from './pages/EventDetails.vue'
 import Announcements from './pages/Announcements.vue'
 import Gallery from './pages/Gallery.vue'
 import GalleryAlbum from './pages/GalleryAlbum.vue'
+import About from './pages/About.vue'
+import Contact from './pages/Contact.vue'
 import Home from './pages/Home.vue'
 import NotFound from './pages/NotFound.vue'
 
@@ -22,6 +24,8 @@ const routes = [
   { path: '/announcements', component: Announcements },
   { path: '/gallery', component: Gallery },
   { path: '/gallery/:slug', component: GalleryAlbum },
+  { path: '/about', component: About },
+  { path: '/contact', component: Contact },
   { path: '/:pathMatch(.*)*', component: NotFound }
 ]
 

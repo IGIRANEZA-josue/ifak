@@ -15,6 +15,8 @@ const checks = [
   { url: '/events/feast-of-st-john-bosco-2027', must: ['Feast of St John Bosco', '31 January 2027', 'Add to Google Calendar'] },
   { url: '/events/nope', must: ['Event not found'] },
   { url: '/events/mary-help-parish-feast-2025', must: ['Mary Help', '12.02.38-PM-1024x682.jpeg'] },
+  { url: '/about', must: ['About IFAK', '1964', 'Ntirenganya', 'PCM', 'EPAK', 'ifakdonbosco.ac.rw'] },
+  { url: '/contact', must: ['Contact IFAK', 'info@ifakdonbosco.ac.rw', 'KN 14', 'Write to the school office', 'dos@ifakdonbosco.ac.rw'] },
   { url: '/gallery', must: ['Photo gallery', 'IFAK at 62', 'Campus &amp; Community', 'ifakdonbosco.ac.rw'] },
   { url: '/gallery/ifak-at-62', must: ['IFAK at 62', 'ONE97911-1024x721.jpg', 'photos'] },
   { url: '/gallery/kwibuka31', must: ['Kwibuka31', '2A9A0247-2.jpg'] },
