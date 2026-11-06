@@ -207,6 +207,13 @@ npm run test:ssr                   # renders every route and asserts expected co
 The SSR smoke test (`scripts/ssr-smoke.mjs`) server-renders all routes — articles, events,
 announcements, about/contact, the calendar grid, 404s — and fails if any expected content is missing.
 
+## Dark mode
+
+The site ships a light and a dark theme driven by CSS variables. A sun/moon toggle lives at the end of the
+desktop navbar and in the mobile panel (labelled “Appearance”). The choice is stored in `localStorage`
+(`ifak-theme`) and applied before first paint (no theme flash); when no choice has been made, the OS
+`prefers-color-scheme` setting is used. The boot splash and the browser `theme-color` follow the same theme.
+
 ## Content sources & honesty notes
 
 - Seeded articles are **adapted from the official IFAK website** (ifakdonbosco.ac.rw) and credited to

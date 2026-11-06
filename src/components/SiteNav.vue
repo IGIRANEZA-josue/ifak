@@ -2,6 +2,7 @@
 import { ref, watch, onMounted, onBeforeUnmount } from 'vue'
 import { useRoute } from 'vue-router'
 import OfficialLogo from './OfficialLogo.vue'
+import ThemeToggle from './ThemeToggle.vue'
 
 const route = useRoute()
 const mobileOpen = ref(false)
@@ -83,6 +84,7 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onKeydown))
           >
             {{ link.label }}
           </router-link>
+          <ThemeToggle />
         </nav>
 
         <button
@@ -111,6 +113,10 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onKeydown))
               {{ link.label }}
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
             </router-link>
+            <div class="mobile-theme-row">
+              <span class="mobile-theme-label">Appearance</span>
+              <ThemeToggle />
+            </div>
           </nav>
         </div>
       </div>
@@ -119,10 +125,10 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onKeydown))
 </template>
 
 <style scoped>
-.site-header { position: sticky; top: 0; z-index: 100; background: #fff; }
+.site-header { position: sticky; top: 0; z-index: 100; background: var(--card); }
 
 /* ---- Topbar ---- */
-.topbar { background: var(--navy); color: rgba(255,255,255,0.82); font-size: 0.76rem; }
+.topbar { background: var(--brand-deep); color: rgba(255,255,255,0.82); font-size: 0.76rem; }
 .topbar-inner { display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding-block: 0.32rem; }
 .topbar-contacts { display: flex; gap: 1.1rem; min-width: 0; }
 .topbar-item { display: inline-flex; align-items: center; gap: 0.35rem; color: inherit; text-decoration: none; white-space: nowrap; }
@@ -133,14 +139,14 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onKeydown))
 
 /* ---- Main navbar ---- */
 .navbar {
-  background: #fff;
+  background: var(--card);
   border-bottom: 1px solid var(--line);
 }
 .navbar-inner { display: flex; align-items: center; justify-content: space-between; gap: 1rem; height: 62px; }
 
 .brand { display: flex; align-items: center; gap: 0.65rem; text-decoration: none; }
 .brand-text { display: flex; flex-direction: column; line-height: 1.1; }
-.brand-name { font-size: 1.28rem; font-weight: 700; color: var(--navy); letter-spacing: 0.06em; }
+.brand-name { font-size: 1.28rem; font-weight: 700; color: var(--accent); letter-spacing: 0.06em; }
 .brand-tag { font-size: 0.6rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin-top: 0.2rem; }
 
 .nav-desktop { display: flex; align-items: center; gap: 0.15rem; }
@@ -149,17 +155,17 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onKeydown))
   font-weight: 550; font-size: 0.88rem; padding: 0.45rem 0.62rem; border-radius: var(--radius-sm);
   border-bottom: 2px solid transparent;
 }
-.nav-link:hover { color: var(--navy); background: var(--surface); }
-.nav-link.active { color: var(--navy); border-bottom-color: var(--navy); border-radius: 0; }
+.nav-link:hover { color: var(--accent); background: var(--surface); }
+.nav-link.active { color: var(--accent); border-bottom-color: var(--accent); border-radius: 0; }
 
 /* ---- Hamburger ---- */
 .hamburger {
   display: none; width: 42px; height: 42px; border: 1px solid var(--line-strong);
-  border-radius: var(--radius-sm); background: #fff; cursor: pointer; position: relative;
+  border-radius: var(--radius-sm); background: var(--card); cursor: pointer; position: relative;
 }
 .bar, .bar::before, .bar::after {
   content: ""; position: absolute; left: 10px; right: 10px; height: 2px;
-  background: var(--navy); border-radius: 2px; transition: transform var(--transition), opacity var(--transition);
+  background: var(--accent); border-radius: 2px; transition: transform var(--transition), opacity var(--transition);
 }
 .bar { top: 20px; }
 .bar::before { left: 0; right: 0; top: -7px; }
@@ -170,7 +176,7 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onKeydown))
 
 /* ---- Mobile panel ---- */
 .mobile-panel {
-  background: #fff; border-top: 1px solid var(--line);
+  background: var(--card); border-top: 1px solid var(--line);
   box-shadow: 0 8px 18px rgba(15, 36, 54, 0.08);
   padding-block: 0.75rem 1.25rem;
 }
@@ -181,7 +187,12 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onKeydown))
   border-bottom: 1px solid var(--line);
 }
 .mobile-link:last-of-type { border-bottom: none; }
-.mobile-link.active { color: var(--navy); background: var(--surface); }
+.mobile-theme-row {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0.7rem 0.1rem 0.15rem; border-top: 1px solid var(--line); margin-top: 0.35rem;
+}
+.mobile-theme-label { font-size: 0.88rem; font-weight: 550; color: var(--ink); }
+.mobile-link.active { color: var(--accent); background: var(--surface); }
 
 @media (max-width: 1023px) {
   .nav-desktop { display: none; }

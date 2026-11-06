@@ -59,13 +59,13 @@ defineProps({
   border-radius: var(--radius-sm); padding: 0.3rem 0.55rem; text-align: center;
   box-shadow: var(--shadow-sm);
 }
-.event-badge-day { display: block; font-size: 1.3rem; font-weight: 700; color: var(--navy); line-height: 1; }
+.event-badge-day { display: block; font-size: 1.3rem; font-weight: 700; color: var(--accent); line-height: 1; }
 .event-badge-month { display: block; font-size: 0.58rem; font-weight: 600; letter-spacing: 0.1em; color: var(--muted); margin-top: 0.15rem; }
 .event-body { padding: 1rem 1.15rem 1.15rem; display: flex; flex-direction: column; gap: 0.5rem; }
 .event-topline { display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap; }
 .indicative-tag {
   font-size: 0.65rem; font-weight: 600; letter-spacing: 0.05em;
-  color: #6b5d1c; background: #fdf6e0; border: 1px solid #e8ddb0;
+  color: var(--amber-text); background: var(--amber-bg); border: 1px solid var(--amber-border);
   border-radius: 4px; padding: 0.18rem 0.45rem;
 }
 .event-meta { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 0.3rem; font-size: 0.85rem; color: var(--muted); }

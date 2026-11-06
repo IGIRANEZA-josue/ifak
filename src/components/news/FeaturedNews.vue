@@ -56,11 +56,11 @@ defineProps({
 }
 .featured-label {
   font-size: 0.68rem; font-weight: 600; letter-spacing: 0.12em;
-  text-transform: uppercase; color: var(--navy);
+  text-transform: uppercase; color: var(--accent);
 }
 .featured-title { font-size: clamp(1.35rem, 2.2vw, 1.7rem); line-height: 1.28; font-weight: 650; }
 .featured-title a { color: var(--navy-ink); text-decoration: none; }
-.featured-title a:hover { color: var(--navy); text-decoration: underline; text-underline-offset: 4px; }
+.featured-title a:hover { color: var(--accent); text-decoration: underline; text-underline-offset: 4px; }
 .featured-desc { color: var(--muted); font-size: 0.95rem; line-height: 1.6; }
 .featured-foot {
   margin-top: auto; padding-top: 1rem;

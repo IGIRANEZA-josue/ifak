@@ -235,7 +235,7 @@ import SmartImage from '../components/SmartImage.vue'
 .about-grid p { margin-top: 0.85rem; line-height: 1.7; color: var(--ink); }
 .about-media img { border-radius: var(--radius); border: 1px solid var(--line); width: 100%; aspect-ratio: 16 / 10; object-fit: cover; }
 .about-media figcaption { font-size: 0.78rem; color: var(--muted); margin-top: 0.5rem; line-height: 1.5; }
-.about-media a { color: var(--navy); }
+.about-media a { color: var(--accent); }
 
 .about-quote {
   margin: 1.5rem 0 0; padding: 1rem 1.25rem;
@@ -244,7 +244,7 @@ import SmartImage from '../components/SmartImage.vue'
 .about-quote p { margin: 0; font-style: italic; color: var(--navy-ink); line-height: 1.7; }
 .about-quote cite { display: block; margin-top: 0.6rem; font-size: 0.82rem; font-style: normal; color: var(--muted); }
 
-.facts-band { background: var(--navy); color: #fff; padding-block: 1.5rem; }
+.facts-band { background: var(--brand-deep); color: #fff; padding-block: 1.5rem; }
 .facts-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 1.25rem; }
 .fact dt { font-size: 0.64rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.62); }
 .fact dd { font-size: 0.95rem; font-weight: 600; margin-top: 0.3rem; color: #fff; }
@@ -255,30 +255,30 @@ import SmartImage from '../components/SmartImage.vue'
 .offer-card p { margin-top: 0.55rem; color: var(--ink); line-height: 1.65; font-size: 0.94rem; }
 .combo-list { margin: 0.65rem 0 0; padding-left: 1.1rem; display: grid; gap: 0.3rem; font-size: 0.92rem; color: var(--ink); }
 .offer-links { margin-top: 0.75rem; }
-.offer-links a { color: var(--navy); font-weight: 600; text-decoration: none; }
+.offer-links a { color: var(--accent); font-weight: 600; text-decoration: none; }
 .offer-links a:hover { text-decoration: underline; }
 
 .timeline { list-style: none; margin: 1.5rem 0 0; padding: 0; border-left: 2px solid var(--line-strong); }
 .timeline li { display: grid; grid-template-columns: 90px 1fr; gap: 1.25rem; padding: 0.8rem 0 0.8rem 1.5rem; position: relative; }
 .timeline li::before {
   content: ''; position: absolute; left: -7px; top: 1.35rem; width: 12px; height: 12px;
-  border-radius: 50%; background: var(--navy); border: 2px solid #fff;
+  border-radius: 50%; background: var(--navy); border: 2px solid var(--bg);
 }
-.timeline-year { font-weight: 700; color: var(--navy); font-size: 0.95rem; padding-top: 0.1rem; }
+.timeline-year { font-weight: 700; color: var(--accent); font-size: 0.95rem; padding-top: 0.1rem; }
 .timeline-body { color: var(--ink); line-height: 1.65; max-width: 78ch; }
-.timeline-body a { color: var(--navy); }
+.timeline-body a { color: var(--accent); }
 
 .lead-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; margin-top: 1.5rem; }
 .lead-card { padding: 1.35rem; }
 .lead-card h3 { font-size: 1rem; font-weight: 600; color: var(--navy-ink); }
 .lead-role { font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin-top: 0.25rem; }
 .lead-card p:not(.lead-role) { margin-top: 0.55rem; color: var(--ink); line-height: 1.6; font-size: 0.92rem; }
-.lead-card a { color: var(--navy); }
+.lead-card a { color: var(--accent); }
 
 .family-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem 2rem; margin-top: 1.5rem; }
 .family-grid > div { border-top: 1px solid var(--line); padding-top: 0.75rem; }
 .family-grid dt { font-weight: 600; }
-.family-grid dt a { color: var(--navy); text-decoration: none; }
+.family-grid dt a { color: var(--accent); text-decoration: none; }
 .family-grid dt a:hover { text-decoration: underline; }
 .family-grid dd { margin: 0.35rem 0 0; color: var(--muted); font-size: 0.9rem; line-height: 1.6; }
 
