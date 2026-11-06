@@ -1,7 +1,7 @@
 <script setup>
 import { ref, watch, onMounted, onBeforeUnmount } from 'vue'
 import { useRoute } from 'vue-router'
-import Crest from './Crest.vue'
+import OfficialLogo from './OfficialLogo.vue'
 
 const route = useRoute()
 const mobileOpen = ref(false)
@@ -74,7 +74,7 @@ onBeforeUnmount(() => {
     <div class="navbar">
       <div class="container navbar-inner">
         <router-link to="/" class="brand" aria-label="IFAK — Institut de Formation Apostolique de Kimihurura, home">
-          <Crest :size="46" />
+          <OfficialLogo :size="46" />
           <span class="brand-text">
             <span class="brand-name">IFAK</span>
             <span class="brand-tag">Don Bosco · Kimihurura</span>

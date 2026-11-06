@@ -4,8 +4,9 @@ import news from '../data/news.json'
 import events from '../data/events.json'
 import announcements from '../data/announcements.json'
 
-/** Prefix a public/ asset path with the configured base URL. */
+/** Prefix a public/ asset path with the configured base URL. Absolute URLs pass through unchanged. */
 export function asset(path) {
+  if (/^https?:\/\//.test(String(path))) return String(path)
   const base = import.meta.env.BASE_URL || '/'
   return base.replace(/\/$/, '') + '/' + String(path).replace(/^\//, '')
 }

@@ -1,5 +1,6 @@
 <script setup>
-import { asset, formatDate, dateBadge, pillStyle } from '../../utils/content'
+import { formatDate, dateBadge, pillStyle } from '../../utils/content'
+import SmartImage from '../SmartImage.vue'
 
 defineProps({
   event: { type: Object, required: true },
@@ -10,7 +11,7 @@ defineProps({
 <template>
   <article class="card card-hover event-card" :class="{ past }">
     <router-link class="event-media" :to="`/events/${event.slug}`" :aria-label="`Event details: ${event.title}`" tabindex="-1">
-      <img :src="asset(event.image)" :alt="event.imageAlt || event.title" loading="lazy" width="520" height="390" />
+      <SmartImage :src="event.image" :fallback="event.imageFallback" :alt="event.imageAlt || event.title" width="520" height="390" />
       <div class="event-badge" aria-hidden="true">
         <span class="event-badge-day">{{ dateBadge(event.date).day }}</span>
         <span class="event-badge-month">{{ dateBadge(event.date).month }} {{ dateBadge(event.date).year }}</span>

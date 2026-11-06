@@ -1,5 +1,6 @@
 <script setup>
-import { asset, formatDate, pillStyle } from '../../utils/content'
+import { formatDate, pillStyle } from '../../utils/content'
+import SmartImage from '../SmartImage.vue'
 
 defineProps({
   article: { type: Object, required: true }
@@ -9,7 +10,7 @@ defineProps({
 <template>
   <article class="card card-hover news-card">
     <router-link class="card-media" :to="`/news/${article.slug}`" :aria-label="`Read: ${article.title}`" tabindex="-1">
-      <img :src="asset(article.image)" :alt="article.imageAlt || article.title" width="640" height="400" loading="lazy" />
+      <SmartImage :src="article.image" :fallback="article.imageFallback" :alt="article.imageAlt || article.title" width="640" height="400" />
     </router-link>
     <div class="card-body">
       <div class="card-topline">

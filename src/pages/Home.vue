@@ -1,6 +1,7 @@
 <script setup>
 import { computed } from 'vue'
-import { asset, allNews, splitEventsByDate, allAnnouncements } from '../utils/content'
+import { allNews, splitEventsByDate, allAnnouncements } from '../utils/content'
+import SmartImage from '../components/SmartImage.vue'
 import NewsCard from '../components/news/NewsCard.vue'
 import EventCard from '../components/events/EventCard.vue'
 import Crest from '../components/Crest.vue'
@@ -52,10 +53,12 @@ const pillars = [
       </div>
 
       <figure class="hero-media">
-        <img
-          :src="asset('/images/hero-campus.jpg')"
-          alt="IFAK Don Bosco Kimihurura campus — chapel and courtyard with students in uniform"
+        <SmartImage
+          src="https://ifakdonbosco.ac.rw/wp-content/uploads/2022/09/DSC_0206.jpg"
+          fallback="/images/hero-campus.jpg"
+          alt="IFAK Don Bosco Kimihurura campus"
           width="1400" height="788"
+          loading="eager"
           fetchpriority="high"
         />
         <figcaption class="hero-badge">
@@ -181,7 +184,7 @@ const pillars = [
         </div>
       </div>
       <figure class="visit-media">
-        <img :src="asset('/images/news/barore-alumni.jpg')" alt="IFAK alumni gathering on campus during the school’s anniversary celebration" loading="lazy" width="1100" height="750" />
+        <SmartImage src="https://ifakdonbosco.ac.rw/wp-content/uploads/2026/03/Barore-4.jpg" fallback="/images/news/barore-alumni.jpg" alt="IFAK alumni gathering on campus during the school’s anniversary celebration" loading="lazy" width="1100" height="750" />
         <figcaption class="visit-caption">Alumni gathered at IFAK Kimihurura during the 62nd anniversary celebrations.</figcaption>
       </figure>
     </div>

@@ -12,7 +12,11 @@
     "description": "The Don Bosco schools of Kimihurura — IFAK Secondary, EPA Kimihurura and Don Bosco Nursery & Primary — come together for a joyful Christmas celebration before the holidays.",
     "content": "The Don Bosco family of schools in Kimihurura gathers for the annual Christmas celebration ahead of the school holidays. Students perform items prepared over the term — choir, poems, drama and dance — before families, teachers and friends.\n\nThe celebration is an expression of the joy of Christmas as understood by Don Bosco: a family moment built on song, prayer and gratitude. Parents and friends are warmly welcome.\n\nNote: The programme and time are indicative for the 2026 calendar. The official schedule will be communicated to parents through the school office and notice boards.",
     "indicative": true,
-    "tags": ["Christmas", "Celebration"]
+    "tags": [
+      "Christmas",
+      "Celebration"
+    ],
+    "imageFallback": "/images/events/christmas-celebration.jpg"
   },
   {
     "id": 2,
@@ -21,13 +25,18 @@
     "date": "2027-01-31",
     "time": "09:00",
     "location": "IFAK Don Bosco Kimihurura & Mary Help of Christians Parish, Kimihurura",
-    "image": "/images/news/ifak-at-62-celebration.jpg",
+    "image": "https://ifakdonbosco.ac.rw/wp-content/uploads/2026/02/ONE97911-1024x721.jpg",
     "imageAlt": "Holy Mass during a Salesian feast celebration at IFAK Kimihurura",
     "category": "Religious Events",
     "description": "The IFAK community and the Kimihurura parish celebrate the feast of St John Bosco (31 January), founder of the Salesians — a day of Mass, thanksgiving and Salesian celebration.",
     "content": "Every 31 January, the Salesian family around the world celebrates the feast of St John Bosco (Don Bosco), founder of the Salesians of Don Bosco and patron of youth.\n\nAt IFAK Kimihurura the feast is marked with a Holy Mass offered for students, teachers, benefactors and former students, followed by moments of Salesian celebration prepared by the school and the parish community.\n\nThe school community looks forward to this feast each year — in February 2026 it was combined with the celebration of 62 years of IFAK's educational mission in Rwanda, a day that renewed calls for inclusion, notably the establishment of a girls' dormitory.\n\nNote: The Salesians celebrate St John Bosco on 31 January. IFAK marks the feast with its own liturgical programme — the exact school programme for 2027 will be confirmed by the school office. Dates are indicative.",
     "indicative": true,
-    "tags": ["Don Bosco", "Salesian", "Feast"]
+    "tags": [
+      "Don Bosco",
+      "Salesian",
+      "Feast"
+    ],
+    "imageFallback": "/images/news/ifak-at-62-celebration.jpg"
   },
   {
     "id": 3,
@@ -36,13 +45,18 @@
     "date": "2027-05-24",
     "time": "10:00",
     "location": "Mary Help of Christians Parish (Marie Auxiliatrice), Kimihurura — Gasabo, Kigali",
-    "image": "/images/news/parish-adma.jpg",
+    "image": "https://ifakdonbosco.ac.rw/wp-content/uploads/2025/06/WhatsApp-Image-2025-05-28-at-12.02.38-PM-1024x682.jpeg",
     "imageAlt": "Parishioners celebrating the feast of Mary Help of Christians in Kimihurura",
     "category": "Religious Events",
     "description": "The Kimihurura parish of Marie Auxiliatrice celebrates Mary Help of Christians, patroness of the Salesian family — a feast at the heart of Don Bosco spirituality.",
     "content": "Mary Help of Christians (Marie Auxiliatrice) is the patroness of the Salesian family and the titled saint of the Kimihurura parish that shelters the IFAK Don Bosco community.\n\nThe feast is celebrated with a solemn Holy Mass, joined by students, teachers, parents, ADMA members (the Salesian association of devotees of Mary Help of Christians) and parishioners. 25 May 2025 marked the parish's annual feast with renewed vows and deep devotion.\n\nAll friends of the Don Bosco community are welcome.\n\nNote: The feast of Mary Help of Christians is celebrated on 24 May in the Salesian calendar. The exact parish programme for 2027 will be confirmed by the parish and the school office. Dates are indicative.",
     "indicative": true,
-    "tags": ["Mary Help of Christians", "Parish", "Salesian"]
+    "tags": [
+      "Mary Help of Christians",
+      "Parish",
+      "Salesian"
+    ],
+    "imageFallback": "/images/news/parish-adma.jpg"
   },
   {
     "id": 4,
@@ -51,13 +65,18 @@
     "date": "2026-02-07",
     "time": "09:00",
     "location": "IFAK Don Bosco Kimihurura, Kimihurura — Gasabo, Kigali",
-    "image": "/images/news/ifak-at-62-celebration.jpg",
+    "image": "https://ifakdonbosco.ac.rw/wp-content/uploads/2026/02/ONE97911-1024x721.jpg",
     "imageAlt": "Students, parents and alumni at Holy Mass during the IFAK 62nd anniversary celebration",
     "category": "School Celebrations",
     "description": "Holy Mass and a community gathering marking 62 years of Salesian education in Kimihurura — with a heartfelt call for a girls' dormitory.",
     "content": "On 7 February 2026, the IFAK community celebrated the Feast of St John Bosco while marking 62 years of the institution's contribution to education in Rwanda.\n\nThe celebration began with a Holy Mass attended by students, teachers, alumni, parents and friends. Head Boy Mukyo Thadee and Head Girl Isimbi Ellah addressed the assembly; Isimbi Ellah called for a girls' dormitory so that girls can fully participate in boarding life. Alumni and parent representatives echoed the appeal.\n\nThe Director of IFAK, Rev. Fr. Ntirenganya Jean Bosco, confirmed that plans for a girls' dormitory are included in future development projects, along with a football pitch and a gymnasium.\n\nRead the full story: “IFAK at 62: Celebrating St John Bosco's Day with a Commitment to Inclusive Boarding.”",
     "newsSlug": "ifak-at-62-feast-of-st-john-bosco",
-    "tags": ["Anniversary", "Don Bosco", "Salesian"]
+    "tags": [
+      "Anniversary",
+      "Don Bosco",
+      "Salesian"
+    ],
+    "imageFallback": "/images/news/ifak-at-62-celebration.jpg"
   },
   {
     "id": 5,
@@ -66,13 +85,17 @@
     "date": "2025-05-30",
     "time": "10:00",
     "location": "IFAK Don Bosco Kimihurura, Kimihurura — Gasabo, Kigali",
-    "image": "/images/news/kwibuka31.jpg",
+    "image": "https://ifakdonbosco.ac.rw/wp-content/uploads/2025/06/2A9A0247-2.jpg",
     "imageAlt": "Students and staff standing in silence at the IFAK memorial during Kwibuka31",
     "category": "Community Activities",
     "description": "IFAK gathered to commemorate the 31st anniversary of the 1994 Genocide against the Tutsi, honouring more than 85 people known to have perished at the school.",
     "content": "On Friday 30 May 2025, students, teachers and guests gathered to commemorate the 31st anniversary of the 1994 Genocide against the Tutsi. A wreath was laid at a memorial site bearing the names of those who perished.\n\nThe ceremony was attended by IBUKA representatives and by Ambassador and Senator Joseph Nsengimana, an IFAK alumnus and one of its earliest students, who urged the youth to embrace love and unity. More than 85 people known to have been killed at IFAK during the genocide were remembered.\n\nThe event took place during Rwanda's official 100-day commemoration period.",
     "newsSlug": "kwibuka31-amb-nsengimana-urges-love-and-unity",
-    "tags": ["Kwibuka31", "Commemoration"]
+    "tags": [
+      "Kwibuka31",
+      "Commemoration"
+    ],
+    "imageFallback": "/images/news/kwibuka31.jpg"
   },
   {
     "id": 6,
@@ -81,12 +104,16 @@
     "date": "2025-05-25",
     "time": "10:00",
     "location": "Mary Help of Christians Parish (Marie Auxiliatrice), Kimihurura — Gasabo, Kigali",
-    "image": "/images/news/parish-adma.jpg",
+    "image": "https://ifakdonbosco.ac.rw/wp-content/uploads/2025/06/WhatsApp-Image-2025-05-28-at-12.02.38-PM-1024x682.jpeg",
     "imageAlt": "Kimihurura parish celebrating its feast day with a procession",
     "category": "Religious Events",
     "description": "The Mary Help of Christians Parish in Kimihurura celebrated its annual feast day with a vibrant renewal of ADMA vows and deep devotion.",
     "content": "On 25 May 2025, Mary Help of Christians Parish in Kimihurura celebrated its annual feast day with joy and devotion. The celebration centred on the renewal of vows by ADMA members, the Salesian association of devotees of Mary Help of Christians.\n\nStudents, teachers, parents and parishioners joined the parish for the feast honouring the patroness of the Salesian family — an expression of the close bond between the parish and the IFAK Don Bosco community.",
     "newsSlug": "kimihurura-parish-adma-vows",
-    "tags": ["Parish", "Mary Help of Christians"]
+    "tags": [
+      "Parish",
+      "Mary Help of Christians"
+    ],
+    "imageFallback": "/images/news/parish-adma.jpg"
   }
 ]

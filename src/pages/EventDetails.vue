@@ -1,7 +1,8 @@
 <script setup>
 import { computed, watch } from 'vue'
 import { useRoute } from 'vue-router'
-import { asset, formatDate, dateBadge, pillStyle, splitParagraphs, findEventBySlug, buildShareLinks, allEventsSorted } from '../utils/content'
+import { formatDate, dateBadge, pillStyle, splitParagraphs, findEventBySlug, buildShareLinks, allEventsSorted } from '../utils/content'
+import SmartImage from '../components/SmartImage.vue'
 import EventCard from '../components/events/EventCard.vue'
 
 const route = useRoute()
@@ -69,7 +70,7 @@ watch(event, (e) => {
   <template v-else>
     <article class="event-detail">
       <div class="event-hero">
-        <img class="event-hero-bg" :src="asset(event.image)" :alt="event.imageAlt || event.title" width="1600" height="900" />
+        <SmartImage class="event-hero-bg" :src="event.image" :fallback="event.imageFallback" :alt="event.imageAlt || event.title" width="1600" height="900" loading="eager" />
         <div class="event-hero-overlay" aria-hidden="true"></div>
         <div class="container event-hero-content">
           <nav class="article-crumbs" aria-label="Breadcrumb">

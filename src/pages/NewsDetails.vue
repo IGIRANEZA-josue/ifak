@@ -1,7 +1,8 @@
 <script setup>
 import { computed, ref, watch } from 'vue'
 import { useRoute } from 'vue-router'
-import { asset, formatDate, pillStyle, readingTime, splitParagraphs, findNewsBySlug, buildShareLinks } from '../utils/content'
+import { formatDate, pillStyle, readingTime, splitParagraphs, findNewsBySlug, buildShareLinks } from '../utils/content'
+import SmartImage from '../components/SmartImage.vue'
 import RelatedNews from '../components/news/RelatedNews.vue'
 
 const route = useRoute()
@@ -77,7 +78,7 @@ watch(article, (a) => {
 
       <!-- Cover -->
       <div class="container article-cover-wrap">
-        <img class="article-cover" :src="asset(article.image)" :alt="article.imageAlt || article.title" width="1600" height="900" />
+        <SmartImage class="article-cover" :src="article.image" :fallback="article.imageFallback" :alt="article.imageAlt || article.title" width="1600" height="900" loading="eager" fetchpriority="high" />
       </div>
 
       <div class="container article-container">

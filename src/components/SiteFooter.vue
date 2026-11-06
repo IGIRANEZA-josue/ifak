@@ -1,5 +1,5 @@
 <script setup>
-import Crest from './Crest.vue'
+import OfficialLogo from './OfficialLogo.vue'
 const year = new Date().getFullYear()
 </script>
 
@@ -9,7 +9,7 @@ const year = new Date().getFullYear()
       <h2 id="footer-heading" class="visually-hidden">Contact and site information</h2>
       <div class="footer-grid">
         <div class="footer-brand">
-          <Crest :size="56" />
+          <OfficialLogo :size="56" />
           <p class="footer-name">Institut de Formation<br />Apostolique de Kimihurura</p>
           <p class="footer-tagline">Dedicated to excellence — educating and evangelizing young people in the Salesian spirit of St John Bosco since 1964.</p>
         </div>

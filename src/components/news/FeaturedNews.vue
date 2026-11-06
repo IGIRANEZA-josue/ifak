@@ -1,5 +1,6 @@
 <script setup>
-import { asset, formatDate, pillStyle } from '../../utils/content'
+import { formatDate, pillStyle } from '../../utils/content'
+import SmartImage from '../SmartImage.vue'
 
 defineProps({
   article: { type: Object, required: true }
@@ -8,11 +9,13 @@ defineProps({
 
 <template>
   <article class="featured" :aria-label="`Featured article: ${article.title}`">
-    <img
+    <SmartImage
       class="featured-bg"
-      :src="asset(article.image)"
+      :src="article.image"
+      :fallback="article.imageFallback"
       :alt="article.imageAlt || article.title"
       width="1600" height="900"
+      loading="eager"
       fetchpriority="high"
     />
     <div class="featured-overlay" aria-hidden="true"></div>

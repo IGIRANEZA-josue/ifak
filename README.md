@@ -34,7 +34,8 @@ There is nothing else to maintain.
 
 ### 1. Add a news article
 
-1. Add the cover photo to `public/images/news/` (e.g. `my-story.jpg`).
+1. Add the cover photo to `public/images/news/` (e.g. `my-story.jpg`) — or point `"image"` at the
+   official IFAK website's photo URL and keep a local copy in `"imageFallback"` (see below).
 2. Add a record to `src/data/news.json`:
 
 ```json
@@ -46,6 +47,7 @@ There is nothing else to maintain.
   "date": "2026-11-20",
   "author": "IFAK Communications",
   "image": "/images/news/my-story.jpg",
+  "imageFallback": "/images/news/my-story.jpg",
   "imageAlt": "Descriptive alt text for the photo",
   "featured": false,
   "description": "One-sentence summary shown on cards and at the top of the article.",
@@ -56,6 +58,11 @@ There is nothing else to maintain.
 ```
 
 Notes:
+- **Images**: `image` may be either a local path (e.g. `/images/news/my-story.jpg`) or an absolute
+  URL (e.g. the official site's `https://ifakdonbosco.ac.rw/wp-content/uploads/...`). Absolute URLs are
+  rendered as-is; if they ever fail to load, the browser automatically swaps in the local
+  `imageFallback`. Current records hotlink the school's real event photos from its official site with
+  local fallbacks for offline resilience.
 - `slug` becomes the URL: `/news/my-story`. Keep it lowercase-hyphenated and unique.
 - `category` must match one of the 10 categories in `src/data/categories.json` exactly.
 - `date` must be `YYYY-MM-DD`.
@@ -190,11 +197,23 @@ announcements, the calendar grid, 404s — and fails if any expected content is 
 
 ## Content sources & honesty notes
 
-The seeded articles are **adapted from the official IFAK website** (ifakdonbosco.ac.rw) and are
-credited to their original authors; news photos in `public/images/` are **illustrative AI-generated
-images**, not photographs of the actual events. Events marked *“indicative”* describe recurring
-school and parish celebrations and **must be confirmed with the school office** before being treated
-as official. The school’s communications team should replace images and confirm dates before the
-site is announced publicly.
+- Seeded articles are **adapted from the official IFAK website** (ifakdonbosco.ac.rw) and credited to
+  their original authors. The parish/ADMA article was expanded with the full official report (Bishop
+  Casimir Uwumukiza’s Mass, 25 first professions, Fr. Gabriel Ngendakuriyo presiding).
+- **Photos of real events are hotlinked from the official IFAK website** (the school’s own images),
+  e.g. the 62nd anniversary celebration, Kwibuka31, the Money Makeover Challenge, the ADMA vows Mass
+  and Dean Mwizerwa’s examination preparation. Every hotlinked image has a **local generated
+  fallback** in `public/images/` (wired via `SmartImage.vue` + the `imageFallback` field) so the site
+  still renders if the official site is unreachable.
+- The **homepage hero** and **About section** use real official-site photographs
+  (`DSC_0206.jpg` campus; `Barore-4.jpg` alumni anniversary gathering) with local fallbacks.
+- The **Christmas Celebration 2026** event has no real photo available; it uses an AI-generated
+  illustrative image and is marked *indicative*.
+- The navigation and footer display the **official IFAK logo** from the school’s site, with the
+  inline-SVG crest as automatic fallback.
+- Events marked *“indicative”* describe recurring school and parish celebrations and **must be
+  confirmed with the school office** before being treated as official.
+- If you prefer fully self-hosted images, copy the referenced files into `public/images/` and point
+  the `image` fields at the local copies, then rebuild.
 
 Contact for content updates: IFAK school office — info@ifakdonbosco.ac.rw · +250 787 949 474.
