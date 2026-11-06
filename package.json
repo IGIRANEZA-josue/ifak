@@ -1,0 +1,23 @@
+{
+  "name": "ifak-website",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Official static website for IFAK - Institut de Formation Apostolique de Kimihurura, Kimihurura, Gasabo, Kigali. Vue 3 + Vite, no backend.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "postbuild": "node scripts/postbuild.js",
+    "preview": "vite preview --host 0.0.0.0",
+    "test:ssr": "vite build --ssr src/entry-server.js --outDir dist-ssr && node scripts/ssr-smoke.mjs"
+  },
+  "dependencies": {
+    "vue": "^3.5.13",
+    "vue-router": "^4.5.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.2.1",
+    "@vue/server-renderer": "^3.5.45",
+    "vite": "^5.4.11"
+  }
+}

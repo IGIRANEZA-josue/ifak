@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Academic News",
+    "slug": "academic-news",
+    "color": "#1e5aa8",
+    "description": "Teaching, learning, examinations, curriculum and academic life at IFAK."
+  },
+  {
+    "name": "Student Achievements",
+    "slug": "student-achievements",
+    "color": "#b45309",
+    "description": "Awards, distinctions and remarkable results by IFAK students."
+  },
+  {
+    "name": "Sports",
+    "slug": "sports",
+    "color": "#2f7d4f",
+    "description": "Football, athletics and all school sport and games."
+  },
+  {
+    "name": "Competitions",
+    "slug": "competitions",
+    "color": "#6d28d9",
+    "description": "Debates, olympiads, financial literacy and other inter-school competitions."
+  },
+  {
+    "name": "Religious Events",
+    "slug": "religious-events",
+    "color": "#9d174d",
+    "description": "Masses, feasts and parish life of the Don Bosco community."
+  },
+  {
+    "name": "Community Activities",
+    "slug": "community-activities",
+    "color": "#0f766e",
+    "description": "Outreach, remembrance and engagement with the wider community."
+  },
+  {
+    "name": "School Celebrations",
+    "slug": "school-celebrations",
+    "color": "#c2410c",
+    "description": "Anniversaries, feasts of Don Bosco and other school celebrations."
+  },
+  {
+    "name": "Staff Achievements",
+    "slug": "staff-achievements",
+    "color": "#4338ca",
+    "description": "Recognition and milestones of IFAK teachers and staff."
+  },
+  {
+    "name": "Alumni Stories",
+    "slug": "alumni-stories",
+    "color": "#4d7c0f",
+    "description": "Where IFAK former students are today — journeys and reflections."
+  },
+  {
+    "name": "General Announcements",
+    "slug": "general-announcements",
+    "color": "#475569",
+    "description": "Notices and general information from the school administration."
+  }
+]

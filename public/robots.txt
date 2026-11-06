@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ifakdonbosco.ac.rw/sitemap.xml
