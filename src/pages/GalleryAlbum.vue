@@ -110,8 +110,8 @@ watch(album, (a) => {
   font-size: 0.87rem; color: var(--muted);
 }
 .album-meta-item { display: inline-flex; align-items: center; gap: 0.4rem; }
-.album-meta-item svg { color: var(--navy); }
-.album-source { font-size: 0.85rem; font-weight: 550; color: var(--navy); text-decoration: none; }
+.album-meta-item svg { color: var(--accent); }
+.album-source { font-size: 0.85rem; font-weight: 550; color: var(--accent); text-decoration: none; }
 .album-source:hover { text-decoration: underline; }
 
 .photo-grid {
@@ -123,7 +123,7 @@ watch(album, (a) => {
   border-radius: var(--radius); overflow: hidden; background: var(--surface-2);
   cursor: pointer; transition: border-color var(--transition), box-shadow var(--transition);
 }
-.photo-thumb:hover { border-color: var(--navy); box-shadow: var(--shadow-md); }
+.photo-thumb:hover { border-color: var(--accent); box-shadow: var(--shadow-md); }
 .photo-thumb img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
 
 .album-credit { margin-top: 1.5rem; font-size: 0.8rem; color: var(--muted); text-align: center; }

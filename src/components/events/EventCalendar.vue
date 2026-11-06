@@ -197,15 +197,15 @@ function onGridKeydown(event, index) {
 .calendar-month { flex: 1; text-align: center; font-size: 1.15rem; }
 .cal-nav {
   width: 38px; height: 38px; display: inline-flex; align-items: center; justify-content: center;
-  border: 1px solid var(--line-strong); background: #fff; border-radius: var(--radius-sm);
-  cursor: pointer; color: var(--navy); transition: background var(--transition);
+  border: 1px solid var(--line-strong); background: var(--card); border-radius: var(--radius-sm);
+  cursor: pointer; color: var(--accent); transition: background var(--transition);
 }
 .cal-nav:hover { background: var(--navy-soft); }
 .cal-today {
-  border: 1px solid var(--line-strong); background: #fff; color: var(--navy);
+  border: 1px solid var(--line-strong); background: var(--card); color: var(--accent);
   font-size: 0.8rem; font-weight: 600; border-radius: var(--radius-sm); padding: 0.45rem 0.85rem; cursor: pointer;
 }
-.cal-today:hover { background: var(--surface); border-color: var(--navy); }
+.cal-today:hover { background: var(--surface); border-color: var(--accent); }
 
 .calendar-weekdays {
   display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px;
@@ -223,9 +223,9 @@ function onGridKeydown(event, index) {
 }
 .cal-day:hover { background: var(--navy-soft); }
 .cal-day.outside { color: #b6c0ca; }
-.cal-day.has-events { font-weight: 600; color: var(--navy); }
+.cal-day.has-events { font-weight: 600; color: var(--accent); }
 .cal-day.today { border: 1.5px solid var(--navy); }
-.cal-day.selected { background: var(--navy); color: #fff; border-color: var(--navy); }
+.cal-day.selected { background: var(--navy); color: #fff; border-color: var(--accent); }
 .cal-day-num { font-size: 0.92rem; line-height: 1; }
 .cal-dots { display: flex; gap: 3px; height: 5px; }
 .cal-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--navy); }
@@ -248,13 +248,13 @@ function onGridKeydown(event, index) {
 .day-events { display: flex; flex-direction: column; gap: 0.65rem; }
 .day-event {
   display: flex; align-items: center; gap: 0.85rem;
-  background: #fff; border: 1px solid var(--line);
+  background: var(--card); border: 1px solid var(--line);
   border-radius: var(--radius-sm); padding: 0.65rem 0.8rem;
   text-decoration: none; color: inherit; transition: border-color var(--transition);
 }
-.day-event:hover { border-color: var(--navy); }
+.day-event:hover { border-color: var(--accent); }
 .day-event-time {
-  flex: none; font-weight: 650; color: var(--navy);
+  flex: none; font-weight: 650; color: var(--accent);
   min-width: 3.1rem; font-size: 0.9rem;
 }
 .day-event-info { display: flex; flex-direction: column; gap: 0.15rem; min-width: 0; }

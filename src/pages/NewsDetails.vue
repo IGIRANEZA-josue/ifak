@@ -143,7 +143,7 @@ watch(article, (a) => {
   display: flex; gap: 0.55rem; align-items: center; flex-wrap: wrap;
   font-size: 0.83rem; color: var(--muted); padding-top: 1.5rem;
 }
-.article-crumbs a { color: var(--navy); text-decoration: none; font-weight: 600; }
+.article-crumbs a { color: var(--accent); text-decoration: none; font-weight: 600; }
 .article-crumbs a:hover { text-decoration: underline; }
 .crumb-current { color: var(--muted); }
 
@@ -184,12 +184,12 @@ watch(article, (a) => {
 .share-buttons { display: flex; align-items: center; gap: 0.4rem; flex-wrap: wrap; }
 .share-btn {
   width: 38px; height: 38px; display: inline-flex; align-items: center; justify-content: center;
-  border-radius: 50%; border: 1px solid var(--line-strong); background: #fff;
-  color: var(--navy); cursor: pointer; text-decoration: none;
+  border-radius: 50%; border: 1px solid var(--line-strong); background: var(--card);
+  color: var(--accent); cursor: pointer; text-decoration: none;
   transition: background var(--transition), color var(--transition), border-color var(--transition);
 }
-.share-btn:hover { background: var(--navy); border-color: var(--navy); color: #fff; }
-.copied-hint { font-size: 0.8rem; color: var(--navy); font-weight: 600; }
+.share-btn:hover { background: var(--navy); border-color: var(--accent); color: #fff; }
+.copied-hint { font-size: 0.8rem; color: var(--accent); font-weight: 600; }
 
 .source-note { font-size: 0.82rem; color: var(--muted); font-style: italic; margin-top: 1.25rem; }
 .back-news { margin-top: 1.5rem; }

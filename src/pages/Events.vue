@@ -67,9 +67,9 @@ const past = computed(() => split.value.past)
 .section-sub { color: var(--muted); margin-top: 0.3rem; max-width: 70ch; }
 .count-badge {
   font-size: 0.72rem; font-weight: 600;
-  background: var(--navy-soft); color: var(--navy); border-radius: 4px;
+  background: var(--navy-soft); color: var(--accent); border-radius: 4px;
   padding: 0.15rem 0.55rem; text-align: center; border: 1px solid var(--line-strong);
 }
-.count-muted { background: var(--navy-soft); color: var(--navy); }
+.count-muted { background: var(--navy-soft); color: var(--accent); }
 .muted-note { color: var(--muted); padding: 1rem 0; }
 </style>

@@ -79,7 +79,7 @@ function attachmentHref(file) {
   display: flex; flex-direction: column; align-items: center; justify-content: center;
   gap: 0.15rem; padding: 1rem 0.5rem; text-align: center;
 }
-.announcement-day { font-size: 1.6rem; font-weight: 700; color: var(--navy); line-height: 1; }
+.announcement-day { font-size: 1.6rem; font-weight: 700; color: var(--accent); line-height: 1; }
 .announcement-month { font-size: 0.6rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
 .announcement-body { padding: 1.1rem 1.35rem 1.2rem; display: flex; flex-direction: column; gap: 0.5rem; }
 .announcement-topline { display: flex; align-items: center; gap: 0.65rem; flex-wrap: wrap; }
@@ -94,10 +94,10 @@ function attachmentHref(file) {
 .attachment-chip {
   display: inline-flex; align-items: center; gap: 0.6rem;
   border: 1px solid var(--line-strong); border-radius: var(--radius-sm);
-  padding: 0.45rem 0.75rem; text-decoration: none; color: var(--navy);
-  background: #fff; transition: border-color var(--transition), box-shadow var(--transition);
+  padding: 0.45rem 0.75rem; text-decoration: none; color: var(--accent);
+  background: var(--card); transition: border-color var(--transition), box-shadow var(--transition);
 }
-.attachment-chip:hover { border-color: var(--navy); box-shadow: var(--shadow-sm); }
+.attachment-chip:hover { border-color: var(--accent); box-shadow: var(--shadow-sm); }
 .attachment-label { display: block; font-size: 0.82rem; font-weight: 600; line-height: 1.3; }
 .attachment-meta { display: block; font-size: 0.68rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; }
 @media (max-width: 640px) {

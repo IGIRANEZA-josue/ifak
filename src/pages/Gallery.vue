@@ -44,9 +44,9 @@ const totalPhotos = gallery.reduce((sum, album) => sum + album.photos.length, 0)
   border-radius: var(--radius-sm); padding: 0.7rem 0.9rem;
   font-size: 0.88rem; color: var(--ink); line-height: 1.55; margin-bottom: 1.5rem;
 }
-.gallery-note svg { flex: none; color: var(--navy); margin-top: 0.1rem; }
+.gallery-note svg { flex: none; color: var(--accent); margin-top: 0.1rem; }
 .albums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 1.25rem; }
 .gallery-credit { margin-top: 2rem; text-align: center; font-size: 0.82rem; color: var(--muted); }
-.gallery-credit a { color: var(--navy); font-weight: 550; text-decoration: none; }
+.gallery-credit a { color: var(--accent); font-weight: 550; text-decoration: none; }
 .gallery-credit a:hover { text-decoration: underline; }
 </style>

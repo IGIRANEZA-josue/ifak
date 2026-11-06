@@ -163,14 +163,14 @@ function onSubmit(e) {
 
 .contact-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; }
 .contact-card { padding: 1.35rem; display: flex; flex-direction: column; gap: 0.5rem; }
-.contact-icon { color: var(--navy); display: inline-flex; }
+.contact-icon { color: var(--accent); display: inline-flex; }
 .contact-card h3 { font-size: 1rem; font-weight: 600; color: var(--navy-ink); }
 .contact-card address { font-style: normal; color: var(--ink); line-height: 1.65; font-size: 0.92rem; }
 .contact-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.4rem; }
-.contact-list a { color: var(--navy); text-decoration: none; font-size: 0.92rem; font-weight: 550; }
+.contact-list a { color: var(--accent); text-decoration: none; font-size: 0.92rem; font-weight: 550; }
 .contact-list a:hover { text-decoration: underline; }
 .contact-list span { display: block; font-size: 0.75rem; color: var(--muted); }
-.contact-action { margin-top: auto; color: var(--navy); font-weight: 600; font-size: 0.88rem; text-decoration: none; }
+.contact-action { margin-top: auto; color: var(--accent); font-weight: 600; font-size: 0.88rem; text-decoration: none; }
 .contact-action:hover { text-decoration: underline; }
 .contact-note { font-size: 0.78rem; color: var(--muted); line-height: 1.5; margin-top: auto; padding-top: 0.35rem; }
 
@@ -181,21 +181,21 @@ function onSubmit(e) {
 
 .message-panel h2 { font-size: 1.25rem; font-weight: 650; color: var(--navy-ink); }
 .message-note { color: var(--muted); font-size: 0.88rem; margin-top: 0.4rem; line-height: 1.6; }
-.message-note a { color: var(--navy); }
+.message-note a { color: var(--accent); }
 .message-form { display: grid; gap: 0.75rem; margin-top: 1rem; }
 .form-row { display: grid; gap: 0.3rem; }
 .form-row label { font-size: 0.78rem; font-weight: 600; letter-spacing: 0.04em; color: var(--navy-ink); }
 .form-row input, .form-row select, .form-row textarea {
   border: 1px solid var(--line-strong); border-radius: var(--radius-sm);
-  padding: 0.55rem 0.7rem; font: inherit; font-size: 0.93rem; background: #fff; color: var(--ink);
+  padding: 0.55rem 0.7rem; font: inherit; font-size: 0.93rem; background: var(--card); color: var(--ink);
 }
 .form-row input:focus, .form-row select:focus, .form-row textarea:focus {
-  outline: 2px solid var(--navy); outline-offset: 1px; border-color: var(--navy);
+  outline: 2px solid var(--navy); outline-offset: 1px; border-color: var(--accent);
 }
 
-.admissions-strip { border: 1px solid var(--line); border-left: 3px solid var(--navy); border-radius: var(--radius-sm); padding: 1rem 1.25rem; background: #fff; }
+.admissions-strip { border: 1px solid var(--line); border-left: 3px solid var(--navy); border-radius: var(--radius-sm); padding: 1rem 1.25rem; background: var(--card); }
 .admissions-strip p { line-height: 1.65; color: var(--ink); }
-.admissions-strip a { color: var(--navy); }
+.admissions-strip a { color: var(--accent); }
 
 .sources-note { font-size: 0.8rem; color: var(--muted); padding-block: 0 1.5rem; margin-bottom: 0.5rem; }
 

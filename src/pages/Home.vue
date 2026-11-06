@@ -186,7 +186,7 @@ const pillars = [
 
 <style scoped>
 /* ---------- Hero ---------- */
-.hero { background: #fff; border-bottom: 1px solid var(--line); }
+.hero { background: var(--bg); border-bottom: 1px solid var(--line); }
 .hero-inner {
   display: grid; grid-template-columns: 1fr 1fr;
   gap: clamp(1.75rem, 4vw, 3.5rem); align-items: center;
@@ -210,10 +210,10 @@ const pillars = [
 .hero-caption { font-size: 0.78rem; color: var(--muted); margin-top: 0.5rem; }
 
 /* ---------- Pillars ---------- */
-.pillars-section { background: #fff; border-bottom: 1px solid var(--line); padding-block: clamp(1.5rem, 3vw, 2.25rem); }
+.pillars-section { background: var(--bg); border-bottom: 1px solid var(--line); padding-block: clamp(1.5rem, 3vw, 2.25rem); }
 .pillars-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.75rem; }
 .pillar { border-top: 2px solid var(--navy); padding-top: 0.85rem; }
-.pillar-icon { color: var(--navy); margin-bottom: 0.45rem; }
+.pillar-icon { color: var(--accent); margin-bottom: 0.45rem; }
 .pillar h2 { font-size: 0.98rem; font-weight: 600; }
 .pillar p { color: var(--muted); font-size: 0.89rem; line-height: 1.6; margin-top: 0.3rem; }
 
@@ -224,7 +224,7 @@ const pillars = [
 .home-events-list { display: grid; gap: 1rem; }
 .muted-note { color: var(--muted); }
 .year-glance {
-  background: #fff; border: 1px solid var(--line); border-radius: var(--radius);
+  background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
   padding: 1.4rem;
 }
 .year-glance h3 { font-size: 1rem; font-weight: 600; margin-bottom: 0.75rem; }
@@ -234,7 +234,7 @@ const pillars = [
   padding-block: 0.55rem; border-bottom: 1px solid var(--line); font-size: 0.89rem; line-height: 1.5;
 }
 .year-glance li:last-of-type { border-bottom: none; }
-.year-glance li span { flex: none; width: 3rem; font-weight: 650; color: var(--navy); font-size: 0.85rem; }
+.year-glance li span { flex: none; width: 3rem; font-weight: 650; color: var(--accent); font-size: 0.85rem; }
 .glance-note { font-size: 0.76rem; color: var(--muted); margin-block: 0.75rem 0.9rem; }
 
 /* ---------- Announcement preview ---------- */
@@ -247,7 +247,7 @@ const pillars = [
 }
 .announce-row:first-child { border-top: 1px solid var(--line); }
 .announce-row:hover { background: var(--surface); }
-.announce-row-date { font-weight: 600; color: var(--navy); font-size: 0.8rem; text-transform: uppercase; }
+.announce-row-date { font-weight: 600; color: var(--accent); font-size: 0.8rem; text-transform: uppercase; }
 .announce-row-title { font-weight: 550; line-height: 1.45; font-size: 0.95rem; }
 .announce-row-cat { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.07em; text-transform: uppercase; color: var(--muted); }
 .announce-row svg { color: var(--muted); }

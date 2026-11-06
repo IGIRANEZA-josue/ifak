@@ -3,6 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      /* Set data-theme before first paint — no flash of the wrong theme.
+         Priority: explicit choice in localStorage, else the OS preference. */
+      (function () {
+        try {
+          var t = localStorage.getItem('ifak-theme');
+          if (t !== 'dark' && t !== 'light') {
+            t = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+          }
+          document.documentElement.setAttribute('data-theme', t);
+        } catch (e) {
+          document.documentElement.setAttribute('data-theme', 'light');
+        }
+      })();
+    </script>
     <meta
       name="description"
       content="Official website of IFAK — Institut de Formation Apostolique de Kimihurura, a Catholic Salesian Don Bosco school in Kimihurura, Gasabo, Kigali. News, events, announcements and admissions."
@@ -59,6 +74,13 @@
         .splash-spinner { animation: none; }
         #splash { transition: opacity 150ms linear, visibility 150ms linear; }
       }
+      /* Dark boot splash (follows the pre-paint data-theme above) */
+      :root[data-theme="dark"] #splash { background: #10151d; }
+      :root[data-theme="dark"] .splash-name { color: #e8edf3; }
+      :root[data-theme="dark"] .splash-sub { color: #96a5b4; }
+      :root[data-theme="dark"] .splash-spinner { border-color: #232e3a; border-top-color: #8fb6d9; }
+      :root[data-theme="dark"] .splash-foot { color: #5d6b7a; }
+      :root[data-theme="dark"] .splash-mark { background: #10151d; box-shadow: 0 2px 12px rgba(0, 0, 0, 0.5); }
     </style>
     <noscript><style>#splash { display: none; }</style></noscript>
   </head>
