@@ -168,8 +168,8 @@ const pillars = [
           to the life of Rwanda.
         </p>
         <div class="visit-actions">
-          <a class="btn btn-primary" href="mailto:info@ifakdonbosco.ac.rw">Write to the school office</a>
-          <a class="btn btn-outline" href="tel:+250787949474">+250 787 949 474</a>
+          <router-link class="btn btn-primary" to="/about">More about IFAK</router-link>
+          <router-link class="btn btn-outline" to="/contact">Contact the school office</router-link>
         </div>
       </div>
       <figure class="visit-media">

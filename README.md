@@ -163,7 +163,7 @@ src/
   components/
     Crest.vue                 # inline SVG school crest
     SiteNav.vue               # top utility bar + sticky nav + mobile panel
-    SiteFooter.vue            # contact, links, socials (id="contact")
+    SiteFooter.vue            # contact, links, socials
     PageHero.vue              # navy page-header band with breadcrumb
     news/
       FeaturedNews.vue        # large featured article banner
@@ -182,7 +182,7 @@ src/
       Lightbox.vue            # keyboard-accessible fullscreen photo viewer
   pages/
     Home.vue  News.vue  NewsDetails.vue  Events.vue  EventDetails.vue  Announcements.vue
-    Gallery.vue  GalleryAlbum.vue  NotFound.vue
+    Gallery.vue  GalleryAlbum.vue  About.vue  Contact.vue  NotFound.vue
   data/
     news.json  events.json  announcements.json  categories.json  gallery.json
   utils/
@@ -205,7 +205,7 @@ npm run test:ssr                   # renders every route and asserts expected co
 ```
 
 The SSR smoke test (`scripts/ssr-smoke.mjs`) server-renders all routes — articles, events,
-announcements, the calendar grid, 404s — and fails if any expected content is missing.
+announcements, about/contact, the calendar grid, 404s — and fails if any expected content is missing.
 
 ## Content sources & honesty notes
 
@@ -220,8 +220,11 @@ announcements, the calendar grid, 404s — and fails if any expected content is 
 - The navigation and footer display the **official IFAK logo**, with an inline SVG crest as a
   purely decorative fallback (it is a vector emblem, not a photo).
 - The photo gallery (`/gallery`) is organised in six albums with 44 verified URLs from the official site.
-- If you want fully self-hosted images, download the files from the official site, drop them into
-  `public/images/` and point the JSON/gallery URLs at the local copies, then rebuild.
+- The **About** (`/about`) and **Contact** (`/contact`) pages state only facts published on the official
+  IFAK website (history since 1964, golden jubilee 2015, 62nd anniversary 2026, Ordinary & Advanced
+  levels, the five A-Level combinations, leadership contacts, Salesian family works). The contact page
+  intentionally has no backend form — it opens the visitor's email app instead. Office hours are not
+  published, so the page advises visitors to call ahead.
 - Events marked *“indicative”* describe recurring school and parish celebrations and **must be
   confirmed with the school office** before being treated as official.
 - If you prefer fully self-hosted images, copy the referenced files into `public/images/` and point
